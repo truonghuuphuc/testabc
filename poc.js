@@ -1,3 +1,5 @@
+window.onload = function() {
+
 (function() {
     // Tạo phần tử overlay để làm nền cho popup
     const overlay = document.createElement('div');
@@ -100,3 +102,4 @@
     // Thêm overlay vào body
     document.body.appendChild(overlay);
 })();
+}
